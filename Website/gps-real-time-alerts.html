@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+        <meta name="description" content="Advanced speed management system for law enforcement featuring real-time notifications, customizable thresholds, and comprehensive reporting. Promote safer driving practices and enhance accountability.">
+        <meta name="keywords" content="police GPS tracking, patrol vehicle monitoring, law enforcement speed management, officer safety protocols, emergency vehicle tracking, patrol fleet safety">
+        
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="PatrolGPS | Advanced Speed Management">
+        <meta property="og:description" content="Intelligent speed monitoring system for law enforcement agencies with customizable thresholds and comprehensive reporting tools.">
+        <meta property="og:image" content="assets/logo.png">
+        <meta property="og:url" content="https://www.unitegps.com/patrol/speed-management">
+        
+        <link rel="canonical" href="https://www.unitegps.com/patrol/speed-management">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+        <title>PatrolGPS | Advanced Speed Management</title>
+
+        <!-- Preconnect to External Resources -->
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+        <link rel="preconnect" href="https://cdn.jsdelivr.net">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <!-- Schema Markup -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "PatrolGPS Speed Management",
+            "applicationCategory": "Law Enforcement Safety Software",
+            "description": "Intelligent speed monitoring and safety management system designed specifically for law enforcement agencies",
+            "operatingSystem": "All",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "featureList": [
+                "Real-Time Speed Monitoring",
+                "Emergency Response Mode",
+                "Command Center Notifications",
+                "Zone-Based Speed Policies",
+                "Officer Safety Analytics",
+                "Shift Performance Reporting"
+            ]
+        }
+        </script>
+        <style>
+            /* Color definitions */
+            /* Color classes - using original names for compatibility */
+            .text-green, .text-blue, .text-primary {
+                color: #006FBA !important; 
+            }
+            .btn-green, .btn-blue, .btn-primary {
+                background-color: #006FBA !important;
+                color: #fff !important;
+            }
+            
+            /* Common elements */
+            hr {
+                height: 2px;
+                background: #789928 !important;
+                color: #789928 !important;
+                opacity: 1 !important;
+                width: 800px !important;
+                max-width: 800px !important;
+                margin: 1rem auto !important;
+                display: block !important;
+            }
+            
+            .feature-icon {
+                font-size: 48px !important;
+                margin-bottom: 1rem;
+            }
+            
+            .school-logo {
+                width: 200px !important;
+                height: 80px !important;
+                object-fit: contain !important;
+            }
+            
+            /* Navbar styles */
+            .navbar {
+                padding: 1rem 1.5rem;
+                z-index: 1000;
+            }
+            
+            .navbar-brand img {
+                height: 40px;
+            }
+            
+            /* Hero Section with Video Background */
+            .hero-section {
+                position: relative;
+                color: #fff;
+                padding: 0;
+                margin: 0;
+                height: 60vh;
+                width: 100%;
+                overflow: hidden;
+                text-align: center;
+            }
+            
+            .hero-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.4);
+                z-index: 1;
+            }
+            
+            .hero-video-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+            
+            .hero-video-container > div {
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                padding: 0 !important;
+            }
+            
+            .hero-video-container iframe {
+                position: absolute !important;
+                top: 50% !important;
+                left: 50% !important;
+                width: 100vw !important; 
+                height: 56.25vw !important; /* Height based on 16:9 ratio */
+                min-height: 100vh !important;
+                min-width: 177.77vh !important; /* Width based on 16:9 ratio */
+                transform: translate(-50%, -50%) !important;
+            }
+            
+            .hero-content {
+                position: relative;
+                z-index: 2;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 0 1.5rem;
+                max-width: 900px;
+                margin: 0 auto;
+            }
+            
+            .hero-content h1 {
+                font-size: 3.5rem;
+                font-weight: bold;
+                margin-bottom: 1.5rem;
+                line-height: 1.2;
+            }
+            
+            .hero-content p {
+                font-size: 1.2rem;
+                line-height: 1.6;
+                margin-bottom: 2rem;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            /* Footer Styles */
+            .site-footer {
+                background-color: #006FBA;
+                padding: 1.5rem 2rem;
+                position: relative;
+                height: 200px;
+                color: white;
+                display: flex;
+                align-items: center;
+            }
+            
+            .site-footer span,
+            .site-footer a {
+                display: block;
+                line-height: 1.4;
+                margin-bottom: 0.2rem;
+            }
+            
+            .site-footer a {
+                color: white !important;
+                text-decoration: none;
+            }
+            
+            .site-footer .larry-mascot {
+                position: absolute;
+                bottom: 0;
+                right: 30px;
+                width: 200px;
+                height: auto;
+            }
+            
+            /* Media Queries - Organized by breakpoint */
+            @media (max-width: 992px) {
+                .hero-section {
+                    height: 70vh;
+                }
+                
+                .hero-content h1 {
+                    font-size: 2.5rem;
+                }
+                
+                .hero-content p {
+                    font-size: 1.1rem;
+                }
+            }
+            
+            @media (max-width: 768px) {
+                /* Hero section adjustments */
+                .hero-section {
+                    height: 80vh;
+                }
+                
+                .hero-content h1 {
+                    font-size: 2rem;
+                }
+                
+                .hero-content p {
+                    font-size: 1rem;
+                }
+                
+                /* Feature cards */
+                .material-symbols-outlined.text-primary {
+                    font-size: 60px !important;
+                }
+                
+                .bg-light.rounded.h-100.text-center.p-4 {
+                    padding: 1.25rem !important;
+                }
+                
+                .p-2 {
+                    padding: 0.5rem !important;
+                }
+                
+                .list-group-item {
+                    font-size: 0.9rem;
+                }
+                
+                .col-lg-4.col-sm-12.text-center.m-auto {
+                    margin: 0.5rem auto !important;
+                }
+                
+                /* Benefits section */
+                .benefits-list li, 
+                .ps-0 li.mb-3 {
+                    font-size: 0.9rem;
+                    margin-bottom: 0.75rem !important;
+                }
+                
+                .card.h-100.border-0.shadow-sm .card-body {
+                    padding: 1.25rem !important;
+                }
+                
+                .py-5 {
+                    padding-top: 2rem !important;
+                    padding-bottom: 2rem !important;
+                }
+            }
+            
+            @media (max-width: 576px) {
+                /* Hero section */
+                .hero-section {
+                    height: 85vh;
+                }
+                
+                .hero-content h1 {
+                    font-size: 1.75rem;
+                    margin-bottom: 1rem;
+                }
+                
+                .hero-content p {
+                    font-size: 0.9rem;
+                }
+                
+                /* Implementation process */
+                .col-md-3.text-center.mb-4 .p-3 {
+                    padding: 1rem !important;
+                }
+                
+                .col-md-3.text-center.mb-4 h5 {
+                    font-size: 1rem;
+                }
+                
+                .col-md-3.text-center.mb-4 p {
+                    font-size: 0.85rem;
+                }
+            }
+            /* Footer mobile adjustments */
+@media (max-width: 768px) {
+    /* Adjust the footer layout for mobile */
+    .site-footer {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: auto; /* Allow height to expand as needed */
+      padding-bottom: 200px; /* Make room for Larry at the bottom */
+    }
+    
+    /* Position the container with text at the top */
+    .site-footer .container {
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Keep text formatting intact */
+    .site-footer span,
+    .site-footer a {
+      display: block;
+      white-space: normal; /* Allow text to wrap normally */
+      max-width: 100%;
+    }
+    
+    /* Position Larry at the bottom */
+    .site-footer .larry-mascot {
+      position: absolute;
+      bottom: 0;
+      right: 30px;
+      width: 200px; /* Keep original size */
+    }
+  }
+            </style>
+    
+		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	</head>
+	<body>
+    
+		<main>
+				  <!-- Navigation -->
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+                    <div class="container">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="assets/logo.png" alt="UniteGPS Logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item"><a class="nav-link" href="crosswalk.html">Crosswalk K-12</a></li>
+                                <li class="nav-item"><a class="nav-link" href="towntransit.html">Town Transit</a></li>
+                                <li class="nav-item"><a class="nav-link" href="patrol.html">PatrolGPS</a></li>
+                                <li class="nav-item"><a class="nav-link" href="fleet.html">UniteGPS Fleet</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+                                <li class="nav-item"><a class="nav-link" href="https://crosswalk.unitegps.com">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+   <!-- Hero Section with Video Background -->
+   <section class="hero-section">
+    <div class="hero-video-container">
+        <div style="padding:56.25% 0 0 0;position:relative;">
+            <iframe
+            src="https://player.vimeo.com/video/1057503427?h=1b92b0da7a&background=1&autoplay=1&loop=1&autopause=0&controls=0&muted=1"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            title="UniteGPS_Landing_Page"></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+    </div>
+    <div class="hero-content">
+        <h1>SPEED MANAGEMENT FOR LAW ENFORCEMENT</h1>
+        <p>Our intelligent speed monitoring system gives command staff real-time visibility
+            into patrol vehicle operations. Enhance officer safety, protect your community,
+            and build greater accountability throughout your department.</p>    </div>
+</section>
+
+<!-- Key Features Grid -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-8 text-center">
+                <h2 class="mb-3 text-blue">Intelligent Speed Monitoring</h2>
+                <p class="lead">PatrolGPS provides law enforcement agencies with comprehensive tools to manage vehicle speeds across various operational scenarios.</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Feature 1 -->
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <div class="text-center">
+                        <div class="icon-circle">
+                            <span class="material-symbols-outlined">emergency</span>
+                        </div>
+                        <h3 class="h5 mb-3">Emergency Response Monitoring</h3>
+                    </div>
+                    <p>Automatically adjust speed thresholds when lights and sirens are activated, allowing for appropriate emergency response while maintaining safety oversight.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <div class="text-center">
+                        <div class="icon-circle">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <h3 class="h5 mb-3">Zone-Based Rules</h3>
+                    </div>
+                    <p>Create custom speed policies for school zones, residential areas, business districts, and highways tailored to your jurisdiction's specific needs.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <div class="text-center">
+                        <div class="icon-circle">
+                            <span class="material-symbols-outlined">hub</span>
+                        </div>
+                        <h3 class="h5 mb-3">Command Center Integration</h3>
+                    </div>
+                    <p>Seamlessly connect with your dispatch center, providing critical speed data alongside location information during emergency response coordination.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 4 -->
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <div class="text-center">
+                        <div class="icon-circle">
+                            <span class="material-symbols-outlined">assessment</span>
+                        </div>
+                        <h3 class="h5 mb-3">Performance Analytics</h3>
+                    </div>
+                    <p>Track trends across your department with comprehensive reporting tools that identify patterns, hotspots, and opportunities for targeted training.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 5 -->
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <div class="text-center">
+                        <div class="icon-circle">
+                            <span class="material-symbols-outlined">phonelink_ring</span>
+                        </div>
+                        <h3 class="h5 mb-3">Instant Notifications</h3>
+                    </div>
+                    <p>Configure alerts to be delivered to the appropriate supervisory staff based on your department's chain of command and shift structure.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 6 -->
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <div class="text-center">
+                        <div class="icon-circle">
+                            <span class="material-symbols-outlined">shield</span>
+                        </div>
+                        <h3 class="h5 mb-3">Officer Safety Focus</h3>
+                    </div>
+                    <p>Promote a culture of safety with tools designed to reduce risks during routine patrol, emergency response, and pursuit situations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Callout Box -->
+<section class="py-3">
+    <div class="container">
+        <div class="callout-box">
+            <h3 class="h4 text-blue">Specialized for Law Enforcement Operations</h3>
+            <p class="mb-0">Unlike generic fleet tracking systems, PatrolGPS understands the unique challenges of law enforcement. Our speed management system distinguishes between routine patrol, code response, and pursuit situations, providing appropriate monitoring for each operational context.</p>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-8 text-center">
+                <h2 class="mb-3 text-blue">How It Works</h2>
+                <p>Our law enforcement speed management system integrates seamlessly with your patrol operations:</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="alert-steps-card bg-white p-4 h-100">
+                    <h3 class="h5 mb-3"><span class="alert-steps-number">1</span>Configure Department Policies</h3>
+                    <p>Set up your department's speed policies through our secure administrative portal, establishing different parameters for various operational scenarios.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="alert-steps-card bg-white p-4 h-100">
+                    <h3 class="h5 mb-3"><span class="alert-steps-number">2</span>Vehicle Tracking</h3>
+                    <p>The system continuously monitors patrol vehicle locations and speeds, cross-referencing with posted speed limits and operational status.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="alert-steps-card bg-white p-4 h-100">
+                    <h3 class="h5 mb-3"><span class="alert-steps-number">3</span>Intelligent Analysis</h3>
+                    <p>Our system intelligently distinguishes between routine patrol, emergency response, and pursuit situations based on vehicle status signals.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="alert-steps-card bg-white p-4 h-100">
+                    <h3 class="h5 mb-3"><span class="alert-steps-number">4</span>Command Notification</h3>
+                    <p>When speed thresholds are exceeded based on the operational context, appropriate command staff receive detailed notifications.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="alert-steps-card bg-white p-4 h-100">
+                    <h3 class="h5 mb-3"><span class="alert-steps-number">5</span>Comprehensive Reporting</h3>
+                    <p>Generate detailed reports for individual officers, shifts, or your entire department to identify patterns and training opportunities.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="alert-steps-card bg-white p-4 h-100">
+                    <h3 class="h5 mb-3"><span class="alert-steps-number">6</span>Continuous Improvement</h3>
+                    <p>Use insights from the system to develop targeted training programs and refine departmental policies for improved safety.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-8 text-center">
+                <h2 class="mb-3 text-blue">Key Benefits</h2>
+                <p>Our law enforcement speed management system delivers significant advantages to your department:</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <span class="material-symbols-outlined text-green" style="font-size:60px;">shield</span>
+                        <h3 class="h5 mt-3">Enhanced Officer Safety</h3>
+                        <p>Reduce accident risks and promote responsible driving behavior throughout your department, protecting your officers and the public.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <span class="material-symbols-outlined text-green" style="font-size:60px;">balance</span>
+                        <h3 class="h5 mt-3">Liability Reduction</h3>
+                        <p>Demonstrate duty of care with proactive speed management, potentially reducing insurance premiums and civil liability exposure.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <span class="material-symbols-outlined text-green" style="font-size:60px;">people</span>
+                        <h3 class="h5 mt-3">Community Trust</h3>
+                        <p>Build public confidence by demonstrating your department's commitment to safe driving practices and professional standards.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <span class="material-symbols-outlined text-green" style="font-size:60px;">support_agent</span>
+                        <h3 class="h5 mt-3">Dispatch Coordination</h3>
+                        <p>Improve emergency response effectiveness with real-time speed and location data available to dispatch personnel.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <span class="material-symbols-outlined text-green" style="font-size:60px;">auto_fix</span>
+                        <h3 class="h5 mt-3">Reduced Maintenance</h3>
+                        <p>Extend vehicle lifespan and reduce maintenance costs through improved driving practices across your patrol fleet.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <span class="material-symbols-outlined text-green" style="font-size:60px;">verified_user</span>
+                        <h3 class="h5 mt-3">Professional Standards</h3>
+                        <p>Uphold the highest standards of professional conduct with transparent monitoring and accountability tools.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Form & Calendar Section -->
+<section class="bg-dark pt-5 pb-5 text-light text-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <h2 class="fw-bold mb-4">Ready to gain complete visibility of your municipal fleet?</h2>
+                <hr class="mb-4">
+                <p class="mb-4">Schedule a demo to see how our real-time fleet map can improve your response times, enhance coordination, and optimize your municipal operations.</p>
+                
+                <!-- Calendar Container -->
+                <div class="bg-white rounded shadow-sm p-4">
+                    <iframe src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ24l3nEaYEXbLqAwzJSwEq_spMZ8ItQJJZLagKDYJ6VoeC9xOmrAFBk874uUE1iIyNsG8zT6JpN" 
+                        style="border: 0; width: 100%; height: 600px;" 
+                        frameborder="0"
+                        allow="camera; microphone; fullscreen">
+                    </iframe>
+                </div>
+                
+                <!-- Confirmation Message -->
+                <div id="confirmationMessage" class="alert alert-success mt-4" style="display: none;">
+                    <i class="fa-solid fa-check-circle me-2"></i>Demo scheduled! Check your email for confirmation.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+<div class="container-fluid px-0">
+    <div class="row mx-0">
+        <div class="col">
+            <div>
+                <span>UniteGPS LLC</span>
+                <span>51 Craggmere Avenue,</span>
+                <span>South Portland, Maine 04106</span>
+                <span><a href="mailto:support@unitegps.zendesk.com">support@unitegps.zendesk.com</a></span>
+                <a href="privacy-policy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</div>
+<img src="assets/larry.png" alt="Larry" class="larry-mascot">
+</footer>
+</main>
+</body>
+</html>

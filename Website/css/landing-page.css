@@ -1,0 +1,309 @@
+/* Color definitions */
+/* Color classes - using original names for compatibility */
+.text-green, .text-blue, .text-primary {
+    color: #006FBA !important; 
+}
+.btn-green, .btn-blue, .btn-primary {
+    background-color: #006FBA !important;
+    color: #fff !important;
+}
+
+/* Common elements */
+hr {
+    height: 2px;
+    background: #789928 !important;
+    color: #789928 !important;
+    opacity: 1 !important;
+    width: 100% !important; /* Changed from 800px to 100% */
+    max-width: 100% !important; /* Changed from 800px to 100% */
+    margin: 1rem auto !important;
+    display: block !important;
+    width: 100% !important; 
+max-width: 800px !important;
+
+}
+
+.feature-icon {
+    font-size: 48px !important;
+    margin-bottom: 1rem;
+}
+
+.school-logo {
+    width: 200px !important;
+    height: 80px !important;
+    object-fit: contain !important;
+}
+
+/* Navbar styles */
+.navbar {
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+/* Hero Section with Video Background */
+.hero-section {
+    position: relative;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    height: 60vh;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-video-container > div {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+}
+
+.hero-video-container iframe {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 100vw !important; 
+    height: 56.25vw !important; /* Height based on 16:9 ratio */
+    min-height: 100vh !important;
+    min-width: 177.77vh !important; /* Width based on 16:9 ratio */
+    transform: translate(-50%, -50%) !important;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #006FBA;
+    padding: 1.5rem 2rem;
+    position: relative;
+    height: 200px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.site-footer span,
+.site-footer a {
+    display: block;
+    line-height: 1.4;
+    margin-bottom: 0.2rem;
+}
+
+.site-footer a {
+    color: white !important;
+    text-decoration: none;
+}
+
+.site-footer .larry-mascot {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    width: 200px;
+    height: auto;
+}
+
+/* Media Queries - Organized by breakpoint */
+@media (max-width: 992px) {
+    .hero-section {
+        height: 70vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Hero section adjustments */
+    .hero-section {
+        height: 80vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    /* Feature cards */
+    .material-symbols-outlined.text-primary {
+        font-size: 60px !important;
+    }
+    
+    .bg-light.rounded.h-100.text-center.p-4 {
+        padding: 1.25rem !important;
+    }
+    
+    .p-2 {
+        padding: 0.5rem !important;
+    }
+    
+    .list-group-item {
+        font-size: 0.9rem;
+    }
+    
+    .col-lg-4.col-sm-12.text-center.m-auto {
+        margin: 0.5rem auto !important;
+    }
+    
+    /* Benefits section */
+    .benefits-list li, 
+    .ps-0 li.mb-3 {
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .card.h-100.border-0.shadow-sm .card-body {
+        padding: 1.25rem !important;
+    }
+    
+    .py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Hero section */
+    .hero-section {
+        height: 85vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    
+    /* Implementation process */
+    .col-md-3.text-center.mb-4 .p-3 {
+        padding: 1rem !important;
+    }
+    
+    .col-md-3.text-center.mb-4 h5 {
+        font-size: 1rem;
+    }
+    
+    .col-md-3.text-center.mb-4 p {
+        font-size: 0.85rem;
+    }
+}
+/* Footer mobile adjustments */
+@media (max-width: 768px) {
+    /* Adjust the footer layout for mobile */
+    .site-footer {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: auto; /* Allow height to expand as needed */
+      padding-bottom: 200px; /* Make room for Larry at the bottom */
+    }
+    
+    /* Position the container with text at the top */
+    .site-footer .container {
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Keep text formatting intact */
+    .site-footer span,
+    .site-footer a {
+      display: block;
+      white-space: normal; /* Allow text to wrap normally */
+      max-width: 100%;
+    }
+    
+    /* Position Larry at the bottom */
+    .site-footer .larry-mascot {
+      position: absolute;
+      bottom: 0;
+      right: 30px;
+      width: 200px; /* Keep original size */
+    }
+  }
+  /* Default layout (desktop) - keep logos in a row */
+.logo-container {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+/* Mobile layout - create 2-column grid only on small screens */
+@media (max-width: 768px) {
+  .row.justify-content-center.align-items-center.mb-5 .col-12.text-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .logo-container {
+    width: 48%;
+    margin: 0 1%;
+    flex: 0 0 auto;
+  }
+  
+  .school-logo {
+    width: 100% !important;
+    max-width: 120px !important;
+  }
+}

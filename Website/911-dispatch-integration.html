@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+        <meta name="description" content="Seamless 911 dispatch integration for law enforcement enabling real-time officer location monitoring, instant communication, and improved emergency coordination for faster response times.">
+        <meta name="keywords" content="911 dispatcher integration, emergency response coordination, police dispatch system, law enforcement communication, real-time officer location, emergency resource allocation">
+        
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="911 Dispatcher Integration | PatrolGPS">
+        <meta property="og:description" content="Seamless 911 dispatcher integration providing real-time officer location monitoring, instant communication capabilities, and streamlined emergency resource allocation.">
+        <meta property="og:image" content="assets/logo.png">
+        <meta property="og:url" content="https://www.unitegps.com/patrol/dispatcher-integration">
+        
+        <link rel="canonical" href="https://www.unitegps.com/patrol/dispatcher-integration">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+        <title>911 Dispatcher Integration | PatrolGPS</title>
+
+        <!-- Preconnect to External Resources -->
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+        <link rel="preconnect" href="https://cdn.jsdelivr.net">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <!-- Schema Markup -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "911 Dispatcher Integration for Law Enforcement",
+            "applicationCategory": "Law Enforcement Communication Software",
+            "description": "Seamless 911 dispatcher integration providing real-time officer location monitoring, instant communication capabilities, and streamlined emergency resource allocation for improved response times",
+            "operatingSystem": "All",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "ratingCount": "130"
+            },
+            "featureList": [
+                "Real-Time Officer Location Monitoring",
+                "Instant Communication Capabilities",
+                "Emergency Resource Allocation",
+                "Incident Management Tools",
+                "Response Time Optimization",
+                "Multi-Agency Coordination"
+            ]
+        }
+        </script>
+		<style>
+		.text-green {
+		color: #006FBA !important;
+		}
+		.btn-green {
+		background-color: #006FBA !important;
+		color: #fff !important;
+		}
+		.btn-blue {
+		background-color: #006FBA !important;
+		color: #fff !important;
+		}
+        .text-blue {
+        color: #006FBA !important;
+        }
+		hr {
+		height: 2px;
+		background: #789928 !important;
+		color: #789928 !important;
+		}
+		.section_last .material-symbols-outlined{
+		font-size: 40px;
+		margin-top: -5px;
+		}
+		a:not(.nav-link) {
+    color: black !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+}
+footer a,
+.footer a,
+section.btn-green a {
+    color: white !important;
+}
+
+/* Add this CSS to your existing styles */
+.feature-list {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+    margin: 1rem 0;
+}
+
+.feature-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.feature-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0.5rem;
+    color: #789928;
+}
+
+.section-divider {
+    height: 2px;
+    background: #789928;
+    width: 100%;
+    margin: 1rem 0;
+    opacity: 1;
+}
+
+.read-more-btn {
+    background-color: #789928;
+    color: white;
+    padding: 0.375rem 1rem;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0.5rem 0;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.list-group-item:before {
+    content: "•";
+    color: #666;
+    margin-right: 8px;
+}
+
+.feature-link {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.feature-link:hover {
+    background-color: #FFE082;
+}
+
+/* If you need to remove the blue color on hover */
+.feature-link:hover .text-blue {
+    color: #006FBA !important;
+}
+         /* Hero Section with Video Background */
+         .hero-section {
+    position: relative;
+    color: #fff;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    height: 60vh; /* Set fixed height */
+    width: 100%; /* Full width */
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Add a dark overlay to the video */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Style for the video container */
+.hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Force the Vimeo wrapper to full dimensions */
+.hero-video-container > div {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+}
+
+/* Force the iframe to cover everything */
+.hero-video-container iframe {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 100vw !important; 
+    height: 56.25vw !important; /* Height based on 16:9 ratio */
+    min-height: 100vh !important;
+    min-width: 177.77vh !important; /* Width based on 16:9 ratio */
+    transform: translate(-50%, -50%) !important;
+}
+/* Hero content responsive improvements */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        height: 70vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 75vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        height: 85vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Feature cards responsive improvements */
+@media (max-width: 768px) {
+    .list-group-item {
+        font-size: 0.9rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .bg-light.rounded h4 {
+        font-size: 1.25rem;
+    }
+    
+    .material-symbols-outlined.text-green {
+        font-size: 70px !important;
+    }
+    
+    .container .p-4,
+    .container .p-2 {
+        padding: 0.75rem !important;
+    }
+    
+    .col-lg-4.col-sm-12.p-2 {
+        padding: 0.5rem !important;
+    }
+}
+
+/* Implementation process section responsive improvements */
+@media (max-width: 768px) {
+    .py-5 .material-symbols-outlined.text-green {
+        font-size: 50px !important;
+    }
+    
+    .py-5 h5 {
+        font-size: 1rem;
+    }
+    
+    .py-5 p {
+        font-size: 0.9rem;
+    }
+}
+    .navbar {
+        padding: 1rem 1.5rem;
+        z-index: 1000;
+    }
+
+    .navbar-brand img {
+        height: 40px;
+    }
+      /* Footer Styles */
+.site-footer {
+    background-color: #006FBA;
+    padding: 1.5rem 2rem;
+    position: relative;
+    height: 200px; /* Increased height to show full Larry */
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.site-footer span,
+.site-footer a {
+    display: block;
+    line-height: 1.4;
+    margin-bottom: 0.2rem;
+}
+
+.site-footer a {
+    color: white !important;
+    text-decoration: none;
+}
+
+.site-footer .larry-mascot {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    width: 200px;
+    height: auto;
+}
+
+/* Feature section specific styles */
+.feature-section {
+    padding: 3rem 0;
+    background-color: #f8f9fa;
+}
+
+.feature-card {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 64px;
+    margin-bottom: 1rem;
+}
+
+/* Benefits section */
+.benefits-list li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.benefits-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #006FBA;
+    font-weight: bold;
+}
+/* Footer mobile adjustments */
+@media (max-width: 768px) {
+    /* Adjust the footer layout for mobile */
+    .site-footer {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: auto; /* Allow height to expand as needed */
+      padding-bottom: 200px; /* Make room for Larry at the bottom */
+    }
+    
+    /* Position the container with text at the top */
+    .site-footer .container {
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Keep text formatting intact */
+    .site-footer span,
+    .site-footer a {
+      display: block;
+      white-space: normal; /* Allow text to wrap normally */
+      max-width: 100%;
+    }
+    
+    /* Position Larry at the bottom */
+    .site-footer .larry-mascot {
+      position: absolute;
+      bottom: 0;
+      right: 30px;
+      width: 200px; /* Keep original size */
+    }
+  }
+		</style>
+
+		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	</head>
+	<body>
+		<main>
+			  <!-- Navigation -->
+              <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/logo.png" alt="UniteGPS Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="crosswalk.html">Crosswalk K-12</a></li>
+                            <li class="nav-item"><a class="nav-link" href="towntransit.html">Town Transit</a></li>
+                            <li class="nav-item"><a class="nav-link" href="patrol.html">PatrolGPS</a></li>
+                            <li class="nav-item"><a class="nav-link" href="fleet.html">UniteGPS Fleet</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://crosswalk.unitegps.com">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+    <!-- Hero Section with Video Background -->
+<section class="hero-section">
+    <div class="hero-video-container">
+        <div style="padding:56.25% 0 0 0;position:relative;">
+            <iframe
+            src="https://player.vimeo.com/video/1057503427?h=1b92b0da7a&background=1&autoplay=1&loop=1&autopause=0&controls=0&muted=1"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            title="UniteGPS_Landing_Page"></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+    </div>
+    <div class="hero-content">
+        <h1>911 DISPATCHER INTEGRATION</h1>
+        <p>PatrolGPS seamlessly connects with 911 dispatch systems, providing operators with real-time officer location data for improved emergency coordination. Our system enables instant communication between dispatch and field units, dramatically reducing response times while streamlining resource allocation through comprehensive visibility of all active units.</p>
+    </div>
+</section>
+							
+            <!-- Main Features Section -->
+            <section>
+                <div class="container mt-5 mb-5">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-12 p-2">
+                            <div class="bg-light rounded h-100 text-center p-4">
+                                <div class="col-lg-4 col-sm-12 text-center m-auto">
+                                    <span style="font-size:100px;" class="material-symbols-outlined text-green">radar</span>
+                                </div>
+                                <div class="col-12 text-center mt-2">
+                                    <h4>Real-Time Officer Tracking</h4>
+                                    <hr>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item border-0 ps-0 bg-light">Monitor exact positions of all patrol units on a unified dispatch interface</li>
+                                        <li class="list-group-item border-0 ps-0 bg-light">View officer status indicators including availability and current assignment</li>
+                                        <li class="list-group-item border-0 ps-0 bg-light">Receive automatic updates when units arrive on scene or change status</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12 p-2">
+                            <div class="bg-light rounded h-100 text-center p-4">
+                                <div class="col-lg-4 col-sm-12 text-center m-auto">
+                                    <span style="font-size:100px;" class="material-symbols-outlined text-green">quickreply</span>
+                                </div>
+                                <div class="col-12 text-center mt-2">
+                                    <h4>Instant Communication</h4>
+                                    <hr>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item border-0 ps-0 bg-light">Send critical information directly to officers' mobile devices with confirmation receipts</li>
+                                        <li class="list-group-item border-0 ps-0 bg-light">Share incident details including location data, suspect information, and situational updates</li>
+                                        <li class="list-group-item border-0 ps-0 bg-light">Enable secure text-based communication for sensitive information exchange</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12 p-2">
+                            <div class="bg-light rounded h-100 text-center p-4">
+                                <div class="col-lg-4 col-sm-12 text-center m-auto">
+                                    <span style="font-size:100px;" class="material-symbols-outlined text-green">hub</span>
+                                </div>
+                                <div class="col-12 text-center mt-2">
+                                    <h4>Resource Allocation</h4>
+                                    <hr>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item border-0 ps-0 bg-light">Identify and dispatch the closest available units to emergency calls</li>
+                                        <li class="list-group-item border-0 ps-0 bg-light">Allocate resources based on officer specialties, equipment, and current workload</li>
+                                        <li class="list-group-item border-0 ps-0 bg-light">Manage multiple incidents simultaneously with prioritization tools</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Benefits Section -->
+            <section class="bg-light py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h2 class="mb-4 text-blue">Benefits of 911 Dispatcher Integration</h2>
+                            <ul class="ps-0" style="list-style-type: disc; padding-left: 20px !important; text-align: left;">
+                                <li class="mb-3">Reduced response times through optimized unit dispatch and routing</li>
+                                <li class="mb-3">Enhanced officer safety with real-time location awareness and status monitoring</li>
+                                <li class="mb-3">Improved coordination during critical incidents and multi-agency responses</li>
+                                <li class="mb-3">Decreased radio traffic by enabling text-based information sharing</li>
+                                <li class="mb-3">Comprehensive incident documentation with automated timestamp logging</li>
+                                <li class="mb-3">More efficient resource management during high-call-volume periods</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                            <img src="assets/patrolgps.png" alt="911 Dispatcher Integration Dashboard" class="img-fluid rounded" style="box-shadow: none; background: transparent;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Advanced Features Section -->
+            <section class="py-5">
+                <div class="container">
+                    <h2 class="text-center mb-4 text-blue">Advanced Integration Features</h2>
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="material-symbols-outlined text-green me-3" style="font-size: 40px;">photo_camera</span>
+                                        <h4 class="mb-0">Live Video Integration</h4>
+                                    </div>
+                                    <p>Access real-time video feeds from patrol vehicles and officer body cameras directly from the dispatch interface. Share critical visual information with responding units to improve situational awareness.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="material-symbols-outlined text-green me-3" style="font-size: 40px;">format_list_bulleted</span>
+                                        <h4 class="mb-0">Automated Prioritization</h4>
+                                    </div>
+                                    <p>Smart algorithm prioritizes incoming calls based on severity, available resources, and geographic distribution of units. Ensures critical situations receive immediate attention while optimizing response to all calls.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="material-symbols-outlined text-green me-3" style="font-size: 40px;">history</span>
+                                        <h4 class="mb-0">Historical Incident Data</h4>
+                                    </div>
+                                    <p>Access comprehensive historical data of previous incidents at specific locations. Provide responding officers with critical context about prior calls, known hazards, and relevant history.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="material-symbols-outlined text-green me-3" style="font-size: 40px;">groups</span>
+                                        <h4 class="mb-0">Multi-Agency Coordination</h4>
+                                    </div>
+                                    <p>Seamlessly coordinate with external agencies including fire, EMS, and neighboring law enforcement departments. Share relevant information across jurisdictions while maintaining security protocols.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Implementation Process -->
+            <section class="py-5 bg-light">
+                <div class="container">
+                    <h2 class="text-center mb-5 text-blue">Simple Implementation Process</h2>
+                    <div class="row">
+                        <div class="col-md-3 text-center mb-4">
+                            <div class="p-3">
+                                <span style="font-size:60px;" class="material-symbols-outlined text-green">assessment</span>
+                                <h5 class="mt-3">1. System Assessment</h5>
+                                <p>Evaluation of your current dispatch infrastructure and integration requirements</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center mb-4">
+                            <div class="p-3">
+                                <span style="font-size:60px;" class="material-symbols-outlined text-green">settings_suggest</span>
+                                <h5 class="mt-3">2. Custom Integration</h5>
+                                <p>Tailored setup that works with your existing CAD and dispatch systems</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center mb-4">
+                            <div class="p-3">
+                                <span style="font-size:60px;" class="material-symbols-outlined text-green">school</span>
+                                <h5 class="mt-3">3. Dispatcher Training</h5>
+                                <p>Comprehensive training for all dispatch personnel on system capabilities</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center mb-4">
+                            <div class="p-3">
+                                <span style="font-size:60px;" class="material-symbols-outlined text-green">support</span>
+                                <h5 class="mt-3">4. Ongoing Support</h5>
+                                <p>24/7 technical assistance and regular system updates</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Form & Calendar Section -->
+            <section class="bg-dark pt-5 pb-5 text-light text-center">
+                <div class="container-fluid px-0">
+                    <div class="row justify-content-center mx-0">
+                        <div class="col-lg-8 col-md-10 col-sm-12">
+                            <h2 class="fw-bold mb-4">Ready to transform your emergency response capabilities?</h2>
+                            <hr class="mb-4">
+                            <p class="mb-4">Schedule a demo to see how our 911 dispatcher integration can help reduce response times, improve coordination, and enhance officer safety throughout your jurisdiction.</p>
+                            
+                            <!-- Calendar Container -->
+                            <div class="bg-white rounded shadow-sm p-4">
+                                <iframe src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ24l3nEaYEXbLqAwzJSwEq_spMZ8ItQJJZLagKDYJ6VoeC9xOmrAFBk874uUE1iIyNsG8zT6JpN" 
+                                    style="border: 0; width: 100%; height: 600px;" 
+                                    frameborder="0"
+                                    allow="camera; microphone; fullscreen">
+                                </iframe>
+                            </div>
+                            
+                            <!-- Confirmation Message -->
+                            <div id="confirmationMessage" class="alert alert-success mt-4" style="display: none;">
+                                <i class="fa-solid fa-check-circle me-2"></i>Demo scheduled! Check your email for confirmation.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="site-footer">
+                <div class="container-fluid px-0">
+                    <div class="row mx-0">
+                        <div class="col">
+                            <div>
+                                <span>UniteGPS LLC</span>
+                                <span>51 Craggmere Avenue,</span>
+                                <span>South Portland, Maine 04106</span>
+                                <span><a href="mailto:support@unitegps.zendesk.com">support@unitegps.zendesk.com</a></span>
+                                <a href="privacy-policy.html">Privacy Policy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/larry.png" alt="Larry" class="larry-mascot">
+            </footer>
+		</main>
+	</body>
+</html>

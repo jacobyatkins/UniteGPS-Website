@@ -1,0 +1,478 @@
+
+		.text-green {
+		color: #006FBA !important;
+		}
+		.btn-green {
+		background-color: #006FBA !important;
+		color: #fff !important;
+		}
+		.btn-blue {
+		background-color: #006FBA !important;
+		color: #fff !important;
+		}
+        .text-blue {
+        color: #006FBA !important;
+        }
+		.demo_container {
+		background-image: url("/sites/default/files/bus_6.jpg");
+		background-color: #cccccc;
+		height: 450px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		}
+        .demo_container2 {
+        background-image: url("/sites/default/files/crosswalk_2.jpg");
+        background-color: #cccccc;
+        height: 150px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        }
+		hr {
+		//display:none;
+		height: 2px;
+		background: #789928 !important;
+		color: #789928 !important;
+		//opacity: 1 !important;
+		}
+		.section_last .material-symbols-outlined{
+		font-size: 40px;
+		margin-top: -5px;
+		}
+		a:not(.nav-link) {
+    color: black !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+}
+footer a, .footer a, section.btn-green a {
+    color: white !important;
+}
+
+/* Add this CSS to your existing styles */
+.feature-list {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+    margin: 1rem 0;
+}
+
+.feature-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.feature-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0.5rem;
+    color: #789928;
+}
+
+.section-divider {
+    height: 2px;
+    background: #789928;
+    width: 100%;
+    margin: 1rem 0;
+    opacity: 1;
+}
+
+.read-more-btn {
+    background-color: #789928;
+    color: white;
+    padding: 0.375rem 1rem;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0.5rem 0;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.list-group-item:before {
+    content: "•";
+    color: #666;
+    margin-right: 8px;
+}
+
+.feature-link {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.feature-link:hover {
+    background-color: #FFE082;
+}
+
+/* If you need to remove the blue color on hover */
+.feature-link:hover .text-blue {
+    color: #006FBA !important;
+}
+          /* Hero Section with Video Background */
+.hero-section {
+    position: relative;
+    color: #fff;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    height: 60vh; /* Set fixed height */
+    width: 100%; /* Full width */
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Add a dark overlay to the video */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Style for the video container */
+.hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Force the Vimeo wrapper to full dimensions */
+.hero-video-container > div {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+}
+
+/* Force the iframe to cover everything */
+.hero-video-container iframe {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 100vw !important; 
+    height: 56.25vw !important; /* Height based on 16:9 ratio */
+    min-height: 100vh !important;
+    min-width: 177.77vh !important; /* Width based on 16:9 ratio */
+    transform: translate(-50%, -50%) !important;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-green, .text-blue, .text-primary {
+    color: #006FBA !important; 
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        height: 70vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 80vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 90vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Feature list responsive improvements */
+@media (max-width: 768px) {
+    .feature-link {
+        padding: 3px 6px;
+    }
+    
+    .feature-list-item {
+        margin-bottom: 10px;
+    }
+    
+    section.section_last .row.p-3 {
+        padding: 1rem !important;
+    }
+    
+    .col-lg-2 {
+        width: auto;
+        margin-right: 5px;
+    }
+}
+	.navbar {
+        padding: 1rem 1.5rem;
+        z-index: 1000;
+    }
+
+    .navbar-brand img {
+        height: 40px;
+    }
+	  /* Footer Styles */
+.site-footer {
+    background-color: #006FBA;
+    padding: 1.5rem 2rem;
+    position: relative;
+    height: 200px; /* Increased height to show full Larry */
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.site-footer span,
+.site-footer a {
+    display: block;
+    line-height: 1.4;
+    margin-bottom: 0.2rem;
+}
+
+.site-footer a {
+    color: white !important;
+    text-decoration: none;
+}
+
+.site-footer .larry-mascot {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    width: 200px;
+    height: auto;
+}
+.section-full {
+    padding: 4rem 0;
+    position: relative;
+}
+
+.bg-light {
+    background-color: #f8f9fa;
+}
+
+.agency-logo-wrapper {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.agency-logo {
+    max-height: 95px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.agency-name {
+    font-size: 0.875rem;
+    color: #6c757d;
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 0 0.5rem;
+}
+
+hr {
+    width: 90%;
+    max-width: 1200px;
+    margin: 1rem auto;
+    border-color: #dee2e6;
+}
+
+.transit-agency {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.testimonial-card {
+    transition: transform 0.2s;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+}
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+.quote-content {
+    flex: 1;
+}
+.testimonial-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-style: italic;
+    margin: 0;
+}
+.text-blue {
+    color: #006FBA !important;
+}
+.case-study-btn {
+    background-color: #006FBA;
+    border: none;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.case-study-btn:hover {
+    background-color: #005a96;
+}
+.logo-container {
+    max-width: 200px;
+    vertical-align: top;
+}
+.school-logo {
+    width: 180px !important;
+    height: 70px !important;
+    object-fit: contain !important;
+    transition: transform 0.3s ease;
+}
+.school-logo:hover {
+    transform: scale(1.05);
+}
+.district-name {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.2;
+}
+@media (max-width: 992px) {
+    .logo-container {
+        max-width: 150px;
+    }
+    .school-logo {
+        width: 140px !important;
+        height: 55px !important;
+    }
+    .district-name {
+        font-size: 0.8rem;
+    }
+    .testimonial-card {
+        height: auto;
+    }
+}
+/* Footer mobile adjustments */
+@media (max-width: 768px) {
+    /* Adjust the footer layout for mobile */
+    .site-footer {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: auto; /* Allow height to expand as needed */
+      padding-bottom: 200px; /* Make room for Larry at the bottom */
+    }
+    
+    /* Position the container with text at the top */
+    .site-footer .container {
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Keep text formatting intact */
+    .site-footer span,
+    .site-footer a {
+      display: block;
+      white-space: normal; /* Allow text to wrap normally */
+      max-width: 100%;
+    }
+    
+    /* Position Larry at the bottom */
+    .site-footer .larry-mascot {
+      position: absolute;
+      bottom: 0;
+      right: 30px;
+      width: 200px; /* Keep original size */
+    }
+  }
+/* Fix for Crosswalk logos on mobile - prevent vertical stacking */
+@media (max-width: 768px) {
+    /* Target the exact structure in Crosswalk page */
+    .bg-light.py-4 .container .row .col-12.text-center .logo-container.d-inline-block {
+      display: inline-block !important;
+      width: 45% !important; 
+      margin: 0 2% 15px !important;
+      vertical-align: top !important;
+    }
+    
+    /* Reset any forced block display */
+    .logo-container.d-inline-block {
+      display: inline-block !important;
+    }
+    
+    /* Ensure text doesn't cause additional stacking */
+    .district-name {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }

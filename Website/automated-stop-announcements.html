@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+        <meta name="description" content="Enhance accessibility with Town Transit's automated stop announcement system. ADA-compliant audio announcements for improved passenger experience and operational efficiency.">
+        <meta name="keywords" content="automated stop announcements, transit ADA compliance, bus stop announcements, public transportation accessibility, automated bus announcements">
+        
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Town Transit Automated Stop Announcements">
+        <meta property="og:description" content="ADA-compliant automated stop announcements for transit agencies that improve accessibility and operational efficiency">
+        <meta property="og:image" content="assets/logo.png">
+        <meta property="og:url" content="https://www.unitegps.com/transit-automated-announcements">
+        
+        <link rel="canonical" href="https://www.unitegps.com/transit-automated-announcements">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+        <title>Town Transit | Automated Stop Announcements</title>
+    
+        <!-- Preconnect to External Resources -->
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+        <link rel="preconnect" href="https://cdn.jsdelivr.net">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://player.vimeo.com">
+    
+        <!-- Schema Markup -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Town Transit Automated Stop Announcements",
+            "applicationCategory": "Transportation Management Software",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock"
+            },
+            "description": "ADA-compliant automated stop announcement system providing clear audio announcements for transit vehicles without the need for expensive hardware."
+        }
+        </script>
+    
+        <style>
+        .text-green {
+            color: #006FBA !important; 
+        }
+        .btn-green {
+            background-color: #006FBA !important;
+            color: #fff !important;
+        }
+        .btn-blue {
+            background-color: #006FBA !important;
+            color: #fff !important;
+        }
+        .text-blue {
+            color: #006FBA !important;
+        }
+        hr {
+            height: 2px;
+            background: #789928 !important;
+            color: #789928 !important;
+            opacity: 1 !important;
+        }
+        .feature-icon {
+            font-size: 48px !important;
+            margin-bottom: 1rem;
+        }
+        
+        /* Hero Section with Video Background */
+        .hero-section {
+            position: relative;
+            color: #fff;
+            padding: 0;
+            margin: 0;
+            height: 60vh;
+            width: 100%;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .hero-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .hero-video-container > div {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            padding: 0 !important;
+        }
+
+        .hero-video-container iframe {
+            position: absolute !important;
+            top: 50% !important;
+            left: 50% !important;
+            width: 100vw !important; 
+            height: 56.25vw !important;
+            min-height: 100vh !important;
+            min-width: 177.77vh !important;
+            transform: translate(-50%, -50%) !important;
+        }
+
+        /* Hero content responsive improvements */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 70vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Improved responsiveness for the HR element */
+@media (max-width: 992px) {
+    hr {
+        width: 90% !important;
+        max-width: 600px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    hr {
+        width: 85% !important;
+        max-width: 400px !important;
+    }
+}
+	    
+        .navbar {
+            padding: 1rem 1.5rem;
+            z-index: 1000;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+        
+        /* Footer Styles */
+        .site-footer {
+            background-color: #006FBA;
+            padding: 1.5rem 2rem;
+            position: relative;
+            height: 200px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .site-footer span,
+        .site-footer a {
+            display: block;
+            line-height: 1.4;
+            margin-bottom: 0.2rem;
+        }
+
+        .site-footer a {
+            color: white !important;
+            text-decoration: none;
+        }
+
+        .site-footer .larry-mascot {
+            position: absolute;
+            bottom: 0;
+            right: 30px;
+            width: 200px;
+            height: auto;
+        }
+
+        hr {
+            height: 2px;
+            background: #789928 !important;
+            color: #789928 !important;
+            opacity: 1 !important;
+            width: 800px !important;
+            margin: 1rem auto !important;
+            display: block !important;
+        }
+        
+        /* Announcement System Specific Styles */
+        .feature-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .info-panel {
+            background-color: #006FBA;
+            color: white;
+            border-radius: 8px;
+            padding: 3rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-list-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-list-icon {
+            margin-right: 1rem;
+            font-size: 1.5rem;
+            color: #006FBA;
+            min-width: 28px;
+        }
+        
+        .feature-list-content {
+            flex: 1;
+        }
+        
+        .feature-list-content h4 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .compliance-section {
+            background-color: #f8f9fa;
+            padding: 4rem 0;
+        }
+        
+        .app-showcase {
+            position: relative;
+            background-color: transparent;
+            border-radius: 12px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            overflow: hidden;
+        }
+        
+        .app-mockup {
+            position: relative;
+            text-align: center;
+            z-index: 1;
+            background-color: transparent;
+        }
+        
+        .app-mockup img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0;
+            box-shadow: none;
+            background-color: transparent;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .benefit-icon {
+            flex-shrink: 0;
+            font-size: 24px;
+            color: #006FBA;
+            margin-right: 1rem;
+            width: 30px;
+            text-align: center;
+        }
+        
+        .benefit-content {
+            flex-grow: 1;
+        }
+        /* Footer mobile adjustments */
+@media (max-width: 768px) {
+    /* Adjust the footer layout for mobile */
+    .site-footer {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: auto; /* Allow height to expand as needed */
+      padding-bottom: 200px; /* Make room for Larry at the bottom */
+    }
+    
+    /* Position the container with text at the top */
+    .site-footer .container {
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Keep text formatting intact */
+    .site-footer span,
+    .site-footer a {
+      display: block;
+      white-space: normal; /* Allow text to wrap normally */
+      max-width: 100%;
+    }
+    
+    /* Position Larry at the bottom */
+    .site-footer .larry-mascot {
+      position: absolute;
+      bottom: 0;
+      right: 30px;
+      width: 200px; /* Keep original size */
+    }
+  }
+        </style>
+
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <main>
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/logo.png" alt="UniteGPS Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="crosswalk.html">Crosswalk K-12</a></li>
+                            <li class="nav-item"><a class="nav-link" href="towntransit.html">Town Transit</a></li>
+                            <li class="nav-item"><a class="nav-link" href="patrol.html">PatrolGPS</a></li>
+                            <li class="nav-item"><a class="nav-link" href="fleet.html">UniteGPS Fleet</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://crosswalk.unitegps.com">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+  <!-- Hero Section with Video Background -->
+  <section class="hero-section">
+    <div class="hero-video-container">
+        <div style="padding:56.25% 0 0 0;position:relative;">
+            <iframe
+            src="https://player.vimeo.com/video/1057498241?h=5268083e8f&background=1&autoplay=1&loop=1&autopause=0&controls=0&muted=1"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            title="UniteGPS_Landing_Page"></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+    </div>
+    <div class="hero-content">
+        <h1>AUTOMATED STOP ANNOUNCEMENTS</h1>
+        <p>ADA-compliant audio announcements for stops and routes that enhance accessibility without expensive hardware</p>
+    </div>
+</section>
+
+            <!-- Main Features Overview -->
+            <section class="container my-5">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-card text-center h-100">
+                            <span class="material-symbols-outlined text-green feature-icon">accessibility_new</span>
+                            <h3 class="mb-3">ADA Compliance</h3>
+                            <p>Empower disabled passengers with clear audio announcements of upcoming stops and transfer points</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-card text-center h-100">
+                            <span class="material-symbols-outlined text-green feature-icon">psychology_alt</span>
+                            <h3 class="mb-3">Driver Focus</h3>
+                            <p>Improve safety by eliminating the driver's responsibility to manually announce each stop</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-card text-center h-100">
+                            <span class="material-symbols-outlined text-green feature-icon">savings</span>
+                            <h3 class="mb-3">Cost-Effective</h3>
+                            <p>Implement automated announcements without purchasing expensive dedicated hardware</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- System Overview Section -->
+            <section class="container mb-5">
+                <div class="app-showcase" style="background-color: transparent;">
+                    <div class="row align-items-center" style="background-color: transparent;">
+                        <div class="col-lg-6 mb-4 mb-lg-0" style="background-color: transparent;">
+                            <h3 class="mb-4">Simple Implementation</h3>
+                            <p class="lead mb-4">Our automated announcement system integrates with your existing devices to provide clear, consistent stop information for all passengers.</p>
+                            
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-tablet-alt"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Device Flexibility</h4>
+                                    <p>Use existing tablets or smartphones as announcement systems</p>
+                                </div>
+                            </div>
+                            
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-broadcast-tower"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Easy Audio Integration</h4>
+                                    <p>Connect to vehicle audio systems or use standalone speakers</p>
+                                </div>
+                            </div>
+                            
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-location-arrow"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>GPS-Triggered</h4>
+                                    <p>Automatically announces stops based on precise GPS location</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" style="background-color: transparent;">
+                            <div class="app-mockup" style="background-color: transparent;">
+                                <img src="assets/town-transit-2.png" alt="Stop Announcement System" style="background-color: transparent;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Info Panel -->
+            <section class="container mb-5">
+                <div class="info-panel">
+                    <div class="row">
+                        <div class="col-md-4 text-center mb-4 mb-md-0">
+                            <span class="material-symbols-outlined d-block mb-3" style="font-size: 3rem;">campaign</span>
+                            <h3 class="mb-3">Clear Audio</h3>
+                            <p>High-quality text-to-speech for clear announcements</p>
+                        </div>
+                        <div class="col-md-4 text-center mb-4 mb-md-0">
+                            <span class="material-symbols-outlined d-block mb-3" style="font-size: 3rem;">auto_fix</span>
+                            <h3 class="mb-3">Customizable</h3>
+                            <p>Tailor announcements to your agency's needs</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <span class="material-symbols-outlined d-block mb-3" style="font-size: 3rem;">language</span>
+                            <h3 class="mb-3">Multi-Lingual</h3>
+                            <p>Support for announcements in multiple languages</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ADA Compliance Section -->
+            <section class="compliance-section">
+                <div class="container">
+                    <h2 class="text-center mb-2">ADA Compliance Made Simple</h2>
+                    <hr>
+                    <div class="row mt-5 justify-content-center">
+                        <div class="col-lg-8">
+                            <p class="lead text-center mb-5">The Americans with Disabilities Act (ADA) requires transit agencies to announce stops and transfer points. Our system helps you meet these requirements efficiently and effectively.</p>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="feature-list-item">
+                                        <div class="feature-list-icon">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <div class="feature-list-content">
+                                            <h4>Stop Announcements</h4>
+                                            <p>Automatically announces each stop along the route</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="feature-list-item">
+                                        <div class="feature-list-icon">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <div class="feature-list-content">
+                                            <h4>Transfer Points</h4>
+                                            <p>Identifies available transfers at connection points</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="feature-list-item">
+                                        <div class="feature-list-icon">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <div class="feature-list-content">
+                                            <h4>Route Identification</h4>
+                                            <p>Announces route number and destination</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="feature-list-item">
+                                        <div class="feature-list-icon">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <div class="feature-list-content">
+                                            <h4>Service Messages</h4>
+                                            <p>Delivers important service updates to passengers</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Implementation Steps -->
+            <section class="container my-5">
+                <h2 class="text-center mb-2">Easy Implementation</h2>
+                <hr>
+                <div class="row mt-5">
+                    <div class="col-md-4 mb-4">
+                        <div class="text-center">
+                            <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <span class="h1 text-blue mb-0">1</span>
+                            </div>
+                            <h3 class="mb-3">Install</h3>
+                            <p>Set up the application on your existing tablets or mobile devices</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="text-center">
+                            <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <span class="h1 text-blue mb-0">2</span>
+                            </div>
+                            <h3 class="mb-3">Connect</h3>
+                            <p>Link to your vehicle's audio system or standalone speaker</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="text-center">
+                            <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <span class="h1 text-blue mb-0">3</span>
+                            </div>
+                            <h3 class="mb-3">Configure</h3>
+                            <p>Set your routes and customize announcement preferences</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Form & Calendar Section -->
+            <section class="bg-dark pt-5 pb-5 text-light text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-md-10 col-sm-12">
+                            <h2 class="fw-bold mb-4">Ready to enhance accessibility on your transit fleet?</h2>
+                            <hr class="mb-4">
+                            <p class="mb-4">Schedule a demo to see how our automated announcement system can help you improve ADA compliance, enhance driver focus, and implement announcements without expensive equipment.</p>
+                            
+                            <!-- Calendar Container -->
+                            <div class="bg-white rounded shadow-sm p-4">
+                                <iframe src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ24l3nEaYEXbLqAwzJSwEq_spMZ8ItQJJZLagKDYJ6VoeC9xOmrAFBk874uUE1iIyNsG8zT6JpN" 
+                                    style="border: 0; width: 100%; height: 600px;" 
+                                    frameborder="0"
+                                    allow="camera; microphone; fullscreen">
+                                </iframe>
+                            </div>
+                            
+                            <!-- Confirmation Message -->
+                            <div id="confirmationMessage" class="alert alert-success mt-4" style="display: none;">
+                                <i class="fa-solid fa-check-circle me-2"></i>Demo scheduled! Check your email for confirmation.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Footer -->
+            <footer class="site-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div>
+                                <span>UniteGPS LLC</span>
+                                <span>51 Craggmere Avenue,</span>
+                                <span>South Portland, Maine 04106</span>
+                                <span><a href="mailto:support@unitegps.zendesk.com">support@unitegps.zendesk.com</a></span>
+                                <a href="privacy-policy.html">Privacy Policy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/larry.png" alt="Larry" class="larry-mascot">
+            </footer>
+        </main>
+    </body>
+</html>

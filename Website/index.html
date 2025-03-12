@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <meta name="description"
+        content="UniteGPS provides specialized GPS tracking solutions for K-12 schools, transit agencies, law enforcement, and municipal fleets. Purpose-built software to transform transportation management with real-time tracking and analytics.">
+    <meta name="keywords"
+        content="GPS tracking solutions, school bus tracking, transit management, law enforcement GPS, fleet management, real-time vehicle tracking, transportation software">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="UniteGPS | Specialized Transportation Management Solutions">
+    <meta property="og:description"
+        content="Purpose-built GPS tracking and management solutions for schools, transit agencies, law enforcement, and municipal fleets. Real-time tracking and analytics for optimized operations.">
+    <meta property="og:image" content="assets/logo.png">
+    <meta property="og:url" content="https://www.unitegps.com">
+
+    <link rel="canonical" href="https://www.unitegps.com">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+    <title>UniteGPS | Purpose-Built Transportation Management Solutions</title>
+
+    <!-- Preconnect to External Resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "UniteGPS",
+        "description": "Provider of specialized GPS tracking and transportation management solutions for K-12 schools, transit agencies, law enforcement, and municipal fleets",
+        "url": "https://www.unitegps.com",
+        "logo": "assets/logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "51 Craggmere Avenue",
+            "addressLocality": "South Portland",
+            "addressRegion": "Maine",
+            "postalCode": "04106",
+            "addressCountry": "US"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "support@unitegps.zendesk.com",
+            "contactType": "customer support"
+        },
+        "sameAs": [],
+        "products": [
+            {
+                "@type": "SoftwareApplication",
+                "name": "Crosswalk K-12",
+                "description": "School transportation management system for K-12 districts"
+            },
+            {
+                "@type": "SoftwareApplication",
+                "name": "Town Transit",
+                "description": "Transit management solution for small and medium agencies"
+            },
+            {
+                "@type": "SoftwareApplication",
+                "name": "PatrolGPS",
+                "description": "GPS tracking system for law enforcement"
+            },
+            {
+                "@type": "SoftwareApplication",
+                "name": "UniteGPS Fleet",
+                "description": "Municipal fleet management and tracking solution"
+            }
+        ]
+    }
+    </script>
+    <style>
+        :root {
+    --unite-green: #006FBA;
+    --unite-blue: #006FBA;
+    --dark-gray: #343a40;
+    --hero-text-color: #FFFFFF;
+    --hero-underline-color: #789928;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.text-green {
+    color: var(--unite-green) !important;
+}
+
+.btn-green {
+    background-color: var(--unite-green) !important;
+    color: #fff !important;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-green:hover {
+    background-color: darken(var(--unite-green), 10%) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-blue {
+    background-color: var(--unite-blue) !important;
+    color: #fff !important;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-blue:hover {
+    background-color: darken(var(--unite-blue), 10%) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.text-blue {
+    color: var(--unite-blue) !important;
+}
+
+hr {
+    height: 4px;
+    background: var(--unite-green) !important;
+    color: var(--unite-green) !important;
+    opacity: 1 !important;
+    border: none;
+    border-radius: 4px;
+}
+
+.navbar {
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+         /* Hero Section with Video Background */
+         .hero-section {
+    position: relative;
+    color: #fff;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    height: 60vh; /* Set fixed height */
+    width: 100%; /* Full width */
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Add a dark overlay to the video */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Style for the video container */
+.hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Force the Vimeo wrapper to full dimensions */
+.hero-video-container > div {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+}
+
+/* Force the iframe to cover everything */
+.hero-video-container iframe {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 100vw !important; 
+    height: 56.25vw !important; /* Height based on 16:9 ratio */
+    min-height: 100vh !important;
+    min-width: 177.77vh !important; /* Width based on 16:9 ratio */
+    transform: translate(-50%, -50%) !important;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 80vh; /* Increased height for more text */
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 90vh; /* Further increased for small screens */
+    }
+    
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Featured Solutions Section */
+.featured-solutions {
+    padding: 4rem 2rem; /* Increased padding */
+    background-color: #fff;
+}
+
+/* Remove the complex grid layout */
+.product-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.product-item {
+   /* Remove the dynamic grid areas */
+   display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 400px; /* Fixed minimum height */
+    padding: 2rem;
+    margin: 1rem;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-item h2 {
+    width: calc(100% - 220px); /* Account for image width + spacing */
+    font-size: 1.9em;
+    color: #006FBA;
+    margin: 0.25rem 0;
+}
+
+.product-item img {
+    position: absolute;
+    top: 2rem;
+    right: 0rem;
+    max-width: 240px;
+    max-height: 240px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    padding-right: 1rem;
+}
+/* Town Transit specific image styling for desktop */
+@media (min-width: 769px) {
+  .product-item img[src*="town-transit"] {
+    position: absolute;
+    top: 2rem;
+    right: 0rem;
+    width: 190px;
+    height: 190px;
+    object-fit: contain;
+    padding-right: 1rem;
+  }
+}
+
+/* Town Transit specific image styling for mobile */
+@media (max-width: 768px) {
+  .product-item img[src*="town-transit"] {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 150px;
+    margin: 1rem 0;
+  }
+}
+.product-item p {
+    width: calc(100% - 220px);
+    font-size: 0.9em;
+    margin: 1rem 0;
+    line-height: 1.5;
+}
+
+.product-item .btn {
+    margin-top: auto; /* Push button to bottom */
+    width: fit-content;
+    padding: 8px 24px;
+    border-radius: 8px;
+    background-color: #006FBA;
+    color: white;
+    text-decoration: none;
+}
+
+#featured-products {
+    background: #fff;
+    padding: 3rem 0; /* Increased padding */
+}
+
+.row {
+    margin-bottom: 2rem; /* Increased margin between rows */
+}
+
+/* Adjust mobile breakpoint */
+@media (max-width: 768px) {
+    .product-item {
+        min-height: 300px;
+    }
+
+    .product-item {
+        margin: 0.75rem; /* Slightly reduced margin for mobile */
+    }
+    .product-item img {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 150px;
+        margin: 1rem 0;
+    }
+    
+    .product-item h2,
+    .product-item p {
+        width: 100%;
+    }
+
+    #hero h1 {
+        font-size: 2.2em;
+    }
+
+    #hero p {
+        width: 90%;
+    }
+
+    #featured-products {
+        padding: 2rem 0;
+    }
+}
+
+/* Remove or modify the hover effect for sections */
+section.btn-green:hover {
+    background-color: #006FBA !important; /* Keep the same color on hover */
+    transform: none; /* Remove any transform effects */
+}
+/* Add this to reduce spacing between text elements */
+section.btn-green .mt-2 {
+    margin-top: 0.5rem !important; /* Reduce the top margin */
+    line-height: 1.4; /* Tighten up line spacing */
+}
+
+/* Add this to ensure proper vertical alignment */
+section.btn-green span, 
+section.btn-green a {
+    display: inline-block;
+    margin-bottom: 0.2rem;
+}
+  /* Footer Styles */
+  .site-footer {
+    background-color: #006FBA;
+    padding: 1.5rem 2rem;
+    position: relative;
+    height: 200px; /* Increased height to show full Larry */
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.site-footer span,
+.site-footer a {
+    display: block;
+    line-height: 1.4;
+    margin-bottom: 0.2rem;
+}
+
+.site-footer a {
+    color: white !important;
+    text-decoration: none;
+}
+
+.site-footer .larry-mascot {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    width: 200px;
+    height: auto;
+}
+/* Footer mobile adjustments */
+@media (max-width: 768px) {
+    /* Adjust the footer layout for mobile */
+    .site-footer {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: auto; /* Allow height to expand as needed */
+      padding-bottom: 200px; /* Make room for Larry at the bottom */
+    }
+    
+    /* Position the container with text at the top */
+    .site-footer .container {
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Keep text formatting intact */
+    .site-footer span,
+    .site-footer a {
+      display: block;
+      white-space: normal; /* Allow text to wrap normally */
+      max-width: 100%;
+    }
+    
+    /* Position Larry at the bottom */
+    .site-footer .larry-mascot {
+      position: absolute;
+      bottom: 0;
+      right: 30px;
+      width: 200px; /* Keep original size */
+    }
+  }
+    </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
+
+    <script>
+    (function(ss, ex) {
+        window.ldfdr = window.ldfdr || function() {
+            (ldfdr._q = ldfdr._q || []).push([].slice.call(arguments));
+        };
+        (function(d, s) {
+            fs = d.getElementsByTagName(s)[0];
+
+            function ce(src) {
+                var cs = d.createElement(s);
+                cs.src = src;
+                cs.async = 1;
+                fs.parentNode.insertBefore(cs, fs);
+            };
+            ce('https://sc.lfeeder.com/lftracker_v1_' + ss + (ex ? '_' + ex : '') + '.js');
+        })(document, 'script');
+    })('3P1w24ddJPz4mY5n');
+    </script>
+
+    <script>
+    window.$zoho = window.$zoho || {};
+    $zoho.salesiq = $zoho.salesiq || {};
+    </script>
+    <script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq8a8a21f4ba317a62d28ac9c49ba1e9c02f576816f6f48712f8aee60d7c6e65f6"
+        defer></script>
+
+</head>
+
+<body>
+
+    <main>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/logo.png" alt="UniteGPS Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="crosswalk.html">Crosswalk K-12</a></li>
+                        <li class="nav-item"><a class="nav-link" href="towntransit.html">Town Transit</a></li>
+                        <li class="nav-item"><a class="nav-link" href="patrol.html">PatrolGPS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="fleet.html">UniteGPS Fleet</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://crosswalk.unitegps.com">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+ <!-- Hero Section with Video Background -->
+<section class="hero-section">
+    <div class="hero-video-container">
+        <div style="padding:56.25% 0 0 0;position:relative;">
+            <iframe
+            src="https://player.vimeo.com/video/1057876541?h=3d0a9da435&background=1&autoplay=1&loop=1&autopause=0&controls=0"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            title="UniteGPS_Landing_Page"></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+    </div>
+    <div class="hero-content">
+        <h1>TRANSFORMING TRANSPORTATION MANAGEMENT WITH PURPOSE-BUILT GPS SOLUTIONS</h1>
+        <p>UniteGPS develops intuitive, specialized software solutions that empower schools, transit authorities, city governments, and law enforcement agencies to optimize transportation operations. By listening to our customers and continuously innovating, we deliver practical, affordable solutions that meet each community's unique needs.</p>
+    </div>
+</section>
+<br>
+        <!-- Featured Products Section -->
+        <div class="container">
+            <h2 class="text-center">Explore Our Featured Solutions</h2>
+            <br>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="product-item">
+                        <img src="assets/crosswalk-tablet-1.png" alt="Crosswalk K-12">
+                        <h2>Crosswalk K-12</h2> 
+                        <p>Crosswalk K-12 transforms school transportation by providing real-time visibility and control, from precise 5-second vehicle tracking to automated student ridership monitoring and intelligent route optimization. Our comprehensive platform empowers district leaders with the necessary tools to improve safety, increase efficiency, deliver peace of mind to parents, and reduce operational costs.</p>
+                        <a href="crosswalk.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="product-item">
+                        <img src="assets/town-transit.png" alt="Town Transit">
+                        <h2>Town Transit</h2>
+                        <p>Town Transit streamlines public transportation for small and medium-sized agencies by delivering enterprise-grade capabilities - from real-time tracking and automated stop announcements, to comprehensive ridership analytics and route optimization. Our platform empowers users to improve passenger experience, make data-driven decisions, and reduce operational complexity.</p>
+                        <a href="towntransit.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="product-item">
+                        <img src="assets/patrolgps.png" alt="PatrolGPS">
+                        <h2>PatrolGPS</h2>
+                        <p>PatrolGPS is a GPS tracking system for law enforcement that provides real-time location
+                            data, speed reports, and updates on lights and sirens. It helps 911 operators and
+                            police leaders manage resources and effectively coordinate deployments. The system
+                            also monitors officer behavior to enhance safety and response times.</p>
+                        <a href="patrol.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="product-item">
+                        <img src="assets/fleet.png" alt="UniteGPS Fleet">
+                        <h2>UniteGPS Fleet</h2>
+                        <p>Fleet enables precise municipal fleet tracking and departmental reporting for city
+                            governments, giving them complete visibility and control over their vehicles. This
+                            robust solution helps cities optimize daily operations, improve efficiency, and make
+                            data-driven decisions to allocate resources better and serve their communities.</p>
+                        <a href="fleet.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                </div>
+        </div>
+     </section>
+
+     <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <span>UniteGPS LLC</span>
+                        <span>51 Craggmere Avenue,</span>
+                        <span>South Portland, Maine 04106</span>
+                        <span><a href="mailto:support@unitegps.zendesk.com">support@unitegps.zendesk.com</a></span>
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="assets/larry.png" alt="Larry" class="larry-mascot">
+    </footer>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+  
+    </main>
+</body>
+
+</html>

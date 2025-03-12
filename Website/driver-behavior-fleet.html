@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+        <meta name="description" content="Comprehensive driver behavior monitoring system for municipal fleets that tracks idle time, speeding, tampering, and performance metrics to reduce costs and improve efficiency.">
+        <meta name="keywords" content="fleet driver behavior monitoring, municipal vehicle tracking, driver accountability, idle time reduction, fleet management system, speeding detection, vehicle performance metrics">
+        
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Driver Behavior Monitoring | UniteGPS Fleet">
+        <meta property="og:description" content="Advanced driver behavior monitoring system for municipal fleets that tracks idle time, speeding, tampering, and performance metrics for comprehensive analysis.">
+        <meta property="og:image" content="assets/logo.png">
+        <meta property="og:url" content="https://www.unitegps.com/fleet/behavior-monitoring">
+        
+        <link rel="canonical" href="https://www.unitegps.com/fleet/behavior-monitoring">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+        <title>Driver Behavior Monitoring | UniteGPS Fleet</title>
+
+        <!-- Preconnect to External Resources -->
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+        <link rel="preconnect" href="https://cdn.jsdelivr.net">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <!-- Schema Markup -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Driver Behavior Monitoring for Municipal Fleets",
+            "applicationCategory": "Fleet Management Software",
+            "description": "Driver behavior monitoring system for municipal fleets that tracks idle time, speeding, tampering, and performance metrics to reduce operational costs and improve efficiency",
+            "operatingSystem": "All",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "145"
+            },
+            "featureList": [
+                "Idle Time Monitoring and Analytics",
+                "Speeding Detection and Alerts",
+                "Acceleration and Braking Pattern Analysis",
+                "Tampering Detection System",
+                "Performance Metrics Tracking",
+                "Comprehensive Reporting Tools",
+                "Departmental Resource Allocation"
+            ]
+        }
+        </script>
+        <style>
+        .text-green {
+        color: #006FBA !important;
+        }
+        .btn-green {
+        background-color: #006FBA !important;
+        color: #fff !important;
+        }
+        .btn-blue {
+        background-color: #006FBA !important;
+        color: #fff !important;
+        }
+        .text-blue {
+        color: #006FBA !important;
+        }
+        .demo_container {
+        background-image: url("/sites/default/files/bus_6.jpg");
+        background-color: #cccccc;
+        height: 450px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        }
+        hr {
+        height: 2px;
+        background: #789928 !important;
+        color: #789928 !important;
+        opacity: 1 !important;
+        }
+        .section_last .material-symbols-outlined{
+        font-size: 40px;
+        margin-top: -5px;
+        }
+        a:not(.nav-link) {
+            color: black !important;
+            text-decoration: none !important;
+            font-weight: 600 !important;
+        }
+        footer a,
+        .footer a,
+        section.btn-green a {
+            color: white !important;
+        }
+
+        /* Add this CSS to your existing styles */
+        .feature-list {
+            list-style-type: none;
+            padding-left: 0;
+            text-align: left;
+            margin: 1rem 0;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .feature-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0.5rem;
+            color: #789928;
+        }
+
+        .section-divider {
+            height: 2px;
+            background: #789928;
+            width: 100%;
+            margin: 1rem 0;
+            opacity: 1;
+        }
+
+        .read-more-btn {
+            background-color: #789928;
+            color: white;
+            padding: 0.375rem 1rem;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0.5rem 0;
+        }
+        .list-group-item {
+            position: relative;
+            display: block;
+            text-align: center;
+        }
+
+        .list-group-item:before {
+            content: "•";
+            color: #666;
+            margin-right: 8px;
+        }
+
+        .feature-link {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+
+        .feature-link:hover {
+            background-color: #FFE082;
+        }
+
+        /* If you need to remove the blue color on hover */
+        .feature-link:hover .text-blue {
+            color: #006FBA !important;
+        }
+            /* Hero Section with Video Background */
+        .hero-section {
+            position: relative;
+            color: #fff;
+            padding: 0; /* Remove padding */
+            margin: 0; /* Remove margin */
+            height: 60vh; /* Set fixed height */
+            width: 100%; /* Full width */
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Add a dark overlay to the video */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        /* Style for the video container */
+        .hero-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Force the Vimeo wrapper to full dimensions */
+        .hero-video-container > div {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            padding: 0 !important;
+        }
+
+        /* Force the iframe to cover everything */
+        .hero-video-container iframe {
+            position: absolute !important;
+            top: 50% !important;
+            left: 50% !important;
+            width: 100vw !important; 
+            height: 56.25vw !important; /* Height based on 16:9 ratio */
+            min-height: 100vh !important;
+            min-width: 177.77vh !important; /* Width based on 16:9 ratio */
+            transform: translate(-50%, -50%) !important;
+        }
+
+        /* Hero content responsive improvements */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        height: 70vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 80vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        height: 85vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Feature cards responsive improvements */
+@media (max-width: 768px) {
+    .material-symbols-outlined.text-green {
+        font-size: 60px !important;
+    }
+    
+    .bg-light.rounded.h-100.text-center.p-4 {
+        padding: 1.25rem !important;
+    }
+    
+    .p-2 {
+        padding: 0.5rem !important;
+    }
+    
+    .list-group-item {
+        font-size: 0.9rem;
+    }
+    
+    .col-lg-4.col-sm-12.text-center.m-auto {
+        margin: 0.5rem auto !important;
+    }
+}
+
+/* Benefits section responsive improvements */
+@media (max-width: 768px) {
+    .benefits-list li, 
+    .ps-0 li.mb-3 {
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .card.h-100.border-0.shadow-sm .card-body {
+        padding: 1.25rem !important;
+    }
+    
+    .py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+}
+
+/* Implementation process responsive improvements */
+@media (max-width: 576px) {
+    .col-md-3.text-center.mb-4 .p-3 {
+        padding: 1rem !important;
+    }
+    
+    .col-md-3.text-center.mb-4 h5 {
+        font-size: 1rem;
+    }
+    
+    .col-md-3.text-center.mb-4 p {
+        font-size: 0.85rem;
+    }
+}
+        .navbar {
+            padding: 1rem 1.5rem;
+            z-index: 1000;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+        /* Footer Styles */
+        .site-footer {
+            background-color: #006FBA;
+            padding: 1.5rem 2rem;
+            position: relative;
+            height: 200px; /* Increased height to show full Larry */
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .site-footer span,
+        .site-footer a {
+            display: block;
+            line-height: 1.4;
+            margin-bottom: 0.2rem;
+        }
+
+        .site-footer a {
+            color: white !important;
+            text-decoration: none;
+        }
+
+        .site-footer .larry-mascot {
+            position: absolute;
+            bottom: 0;
+            right: 30px;
+            width: 200px;
+            height: auto;
+        }
+
+        /* Feature section specific styles */
+        .feature-section {
+            padding: 3rem 0;
+            background-color: #f8f9fa;
+        }
+
+        .feature-card {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 64px;
+            margin-bottom: 1rem;
+        }
+
+        /* Benefits section */
+        .benefits-list li {
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #006FBA;
+            font-weight: bold;
+        }
+        /* Footer mobile adjustments */
+@media (max-width: 768px) {
+    /* Adjust the footer layout for mobile */
+    .site-footer {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: auto; /* Allow height to expand as needed */
+      padding-bottom: 200px; /* Make room for Larry at the bottom */
+    }
+    
+    /* Position the container with text at the top */
+    .site-footer .container {
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Keep text formatting intact */
+    .site-footer span,
+    .site-footer a {
+      display: block;
+      white-space: normal; /* Allow text to wrap normally */
+      max-width: 100%;
+    }
+    
+    /* Position Larry at the bottom */
+    .site-footer .larry-mascot {
+      position: absolute;
+      bottom: 0;
+      right: 30px;
+      width: 200px; /* Keep original size */
+    }
+  }
+        </style>
+
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <body>
+        <main>
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/logo.png" alt="UniteGPS Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="crosswalk.html">Crosswalk K-12</a></li>
+                            <li class="nav-item"><a class="nav-link" href="towntransit.html">Town Transit</a></li>
+                            <li class="nav-item"><a class="nav-link" href="patrol.html">PatrolGPS</a></li>
+                            <li class="nav-item"><a class="nav-link" href="fleet.html">UniteGPS Fleet</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://crosswalk.unitegps.com">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+         <!-- Hero Section with Video Background -->
+<section class="hero-section">
+    <div class="hero-video-container">
+        <div style="padding:56.25% 0 0 0;position:relative;">
+            <iframe
+            src="https://player.vimeo.com/video/1057494431?h=7a336e4c85&background=1&autoplay=1&loop=1&autopause=0&controls=0&muted=1"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            title="UniteGPS_Fleet_Background"></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+    </div>
+    <div class="hero-content">
+        <h1>DRIVER BEHAVIOR MONITORING</h1>
+        <p>UniteGPS Fleet's driver behavior monitoring system provides comprehensive analytics for municipal fleets, tracking idle time, speeding, vehicle tampering, and performance metrics. Our detailed reports enable data-driven decisions, reducing operational costs and improving driver accountability, safety, and overall fleet efficiency.</p>
+    </div>
+</section>
+                            
+            <!-- Main Features Section -->
+            <section>
+                <div class="container mt-5 mb-5">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-12 p-2">
+                            <div class="bg-light rounded h-100 text-center p-4">
+                                <div class="col-lg-4 col-sm-12 text-center m-auto">
+                                    <span style="font-size:100px;" class="material-symbols-outlined text-green">speed</span>
+                                </div>
+                                <div class="col-12 text-center mt-2">
+                                    <h4>Speeding Detection</h4>
+                                    <hr>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item border-0 ps-0 bg-light">Monitor vehicle speeds against posted limits with advanced GPS technology</li>
+                                        <li class="list-group-item border-0 ps-0 bg-light">Receive instant email alerts when vehicles exceed predetermined thresholds</li>
+                                        <li class="list-group-item border-0 ps-0 bg-light">Generate departmental reports with detailed incident locations and durations</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12 p-2">
+                            <div class="bg-light rounded h-100 text-center p-4">
+                                <div class="col-lg-4 col-sm-12 text-center m-auto">
+                                    <span style="font-size:100px;" class="material-symbols-outlined text-green">hourglass_empty</span>
+                                </div>
+                                <div class="col-12 text-center mt-2">
+                                    <h4>Idle Time Monitoring</h4>
+                                    <hr>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item border-0 ps-0 bg-light">Track idle times to reduce fuel consumption and emissions across municipal departments</li>
+                                        <li class="list-group-item border-0 ps-0 bg-light">Set department-specific idle thresholds based on vehicle type and function</li>
+                                        <li class="list-group-item border-0 ps-0 bg-light">Calculate potential savings with detailed idle time analytics and historical patterns</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12 p-2">
+                            <div class="bg-light rounded h-100 text-center p-4">
+                                <div class="col-lg-4 col-sm-12 text-center m-auto">
+                                    <span style="font-size:100px;" class="material-symbols-outlined text-green">moving</span>
+                                </div>
+                                <div class="col-12 text-center mt-2">
+                                    <h4>Driving Pattern Analysis</h4>
+                                    <hr>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item border-0 ps-0 bg-light">Analyze acceleration, braking, and cornering patterns to identify risky driving behaviors</li>
+                                        <li class="list-group-item border-0 ps-0 bg-light">Compare driving metrics between departments or similar vehicles for benchmarking</li>
+                                        <li class="list-group-item border-0 ps-0 bg-light">Develop targeted training programs based on identified improvement areas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Benefits Section -->
+            <section class="bg-light py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                            <img src="assets/fleet.png" alt="Driver Behavior Monitoring Dashboard" class="img-fluid rounded" style="box-shadow: none; background: transparent;">
+                        </div>
+                        <div class="col-lg-6">
+                            <h2 class="mb-4 text-blue">Benefits of Fleet Driver Monitoring</h2>
+                            <ul class="ps-0" style="list-style-type: disc; padding-left: 20px !important; text-align: left;">
+                                <li class="mb-3">Up to 30% reduction in fuel costs through idle time optimization and improved driving habits</li>
+                                <li class="mb-3">Decreased vehicle maintenance expenses through early identification of aggressive driving patterns</li>
+                                <li class="mb-3">Enhanced accountability and transparency in municipal vehicle usage</li>
+                                <li class="mb-3">Improved public perception through visible commitment to responsible resource management</li>
+                                <li class="mb-3">Reduced carbon footprint and environmental impact of municipal operations</li>
+                                <li class="mb-3">Data-driven insights for better departmental resource allocation and budgeting</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Additional Features Section -->
+            <section class="py-5">
+                <div class="container">
+                    <h2 class="text-center mb-4 text-blue">Advanced Monitoring Capabilities</h2>
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="material-symbols-outlined text-green me-3" style="font-size: 40px;">engineering</span>
+                                        <h4 class="mb-0">Tampering Detection</h4>
+                                    </div>
+                                    <p>Advanced systems detect GPS device disconnections, signal interference, and other tampering attempts. Instant alerts notify administrators of potential issues, ensuring continuous monitoring and accountability.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="material-symbols-outlined text-green me-3" style="font-size: 40px;">summarize</span>
+                                        <h4 class="mb-0">Departmental Reporting</h4>
+                                    </div>
+                                    <p>Customized reports for specific municipal departments highlight key metrics and trends. Compare performance across department fleets, establish benchmarks, and track improvement initiatives with easy-to-interpret visualizations.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="material-symbols-outlined text-green me-3" style="font-size: 40px;">scoreboard</span>
+                                        <h4 class="mb-0">Performance Metrics</h4>
+                                    </div>
+                                    <p>Comprehensive performance dashboards track key indicators including fuel efficiency, route optimization, maintenance intervals, and driver safety scores. Establish department-wide standards and measure individual and unit performance.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="material-symbols-outlined text-green me-3" style="font-size: 40px;">history</span>
+                                        <h4 class="mb-0">Historical Analysis</h4>
+                                    </div>
+                                    <p>Access comprehensive historical data to identify long-term trends, seasonal patterns, and behavioral changes over time. Compare current performance against historical benchmarks to measure improvement initiatives and set future goals.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Implementation Process -->
+            <section class="py-5 bg-light">
+                <div class="container">
+                    <h2 class="text-center mb-5 text-blue">Simple Implementation Process</h2>
+                    <div class="row">
+                        <div class="col-md-3 text-center mb-4">
+                            <div class="p-3">
+                                <span style="font-size:60px;" class="material-symbols-outlined text-green">inventory_2</span>
+                                <h5 class="mt-3">1. Hardware Installation</h5>
+                                <p>Quick and non-invasive GPS device installation across your municipal fleet</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center mb-4">
+                            <div class="p-3">
+                                <span style="font-size:60px;" class="material-symbols-outlined text-green">settings</span>
+                                <h5 class="mt-3">2. Department Configuration</h5>
+                                <p>Custom setup with department-specific rules, thresholds, and monitoring parameters</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center mb-4">
+                            <div class="p-3">
+                                <span style="font-size:60px;" class="material-symbols-outlined text-green">school</span>
+                                <h5 class="mt-3">3. Staff Training</h5>
+                                <p>Comprehensive training for department heads, administrators, and fleet managers</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 text-center mb-4">
+                            <div class="p-3">
+                                <span style="font-size:60px;" class="material-symbols-outlined text-green">support</span>
+                                <h5 class="mt-3">4. Ongoing Support</h5>
+                                <p>24/7 technical assistance and regular system updates</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             
+            <!-- Form & Calendar Section -->
+            <section class="bg-dark pt-5 pb-5 text-light text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-md-10 col-sm-12">
+                            <h2 class="fw-bold mb-4">Ready to optimize your municipal fleet operations?</h2>
+                            <hr class="mb-4">
+                            <p class="mb-4">Schedule a demo to see how our driver behavior monitoring system can help reduce costs, improve accountability, and provide valuable data-driven insights for your city's fleet management.</p>
+                            
+                            <!-- Calendar Container -->
+                            <div class="bg-white rounded shadow-sm p-4">
+                                <iframe src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ24l3nEaYEXbLqAwzJSwEq_spMZ8ItQJJZLagKDYJ6VoeC9xOmrAFBk874uUE1iIyNsG8zT6JpN" 
+                                    style="border: 0; width: 100%; height: 600px;" 
+                                    frameborder="0"
+                                    allow="camera; microphone; fullscreen">
+                                </iframe>
+                            </div>
+                            
+                              <!-- Confirmation Message -->
+                              <div id="confirmationMessage" class="alert alert-success mt-4" style="display: none;">
+                                <i class="fa-solid fa-check-circle me-2"></i>Demo scheduled! Check your email for confirmation.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="site-footer">
+                <div class="container-fluid px-0">
+                    <div class="row mx-0">
+                        <div class="col">
+                            <div>
+                                <span>UniteGPS LLC</span>
+                                <span>51 Craggmere Avenue,</span>
+                                <span>South Portland, Maine 04106</span>
+                                <span><a href="mailto:support@unitegps.zendesk.com">support@unitegps.zendesk.com</a></span>
+                                <a href="privacy-policy.html">Privacy Policy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/larry.png" alt="Larry" class="larry-mascot">
+            </footer>
+		</main>
+	</body>
+</html>

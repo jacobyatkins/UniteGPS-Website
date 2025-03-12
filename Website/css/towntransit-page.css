@@ -1,0 +1,501 @@
+
+        <style>
+        .text-green {
+            color: #006FBA !important; 
+        }
+        .btn-green {
+            background-color: #006FBA !important;
+            color: #fff !important;
+        }
+        .btn-blue {
+            background-color: #006FBA !important;
+            color: #fff !important;
+        }
+        .text-blue {
+            color: #006FBA !important;
+        }
+        hr {
+            height: 2px;
+            background: #789928 !important;
+            color: #789928 !important;
+            opacity: 1 !important;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .agency-logo {
+            width: 200px !important;
+            height: 80px !important;
+            object-fit: contain !important;
+        }
+        .feature-icon {
+            font-size: 48px !important;
+            margin-bottom: 1rem;
+        }
+          /* Contact Form Icon Styles */
+          #contact-widget {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 9999;
+                transition: all 0.3s ease;
+            }
+
+            #contact-icon {
+                background: #006FBA;
+                color: white;
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                transition: transform 0.2s ease;
+            }
+
+            #contact-icon:hover {
+                transform: scale(1.1);
+            }
+
+            #contact-icon .material-symbols-outlined {
+                font-size: 36px !important;
+            }
+
+            .form-container {
+                display: none;
+                position: fixed;
+                bottom: 100px;
+                right: 20px;
+                width: 400px;
+                height: 500px;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            }
+
+            .form-container.active {
+                display: block;
+            }
+
+            @media (max-width: 480px) {
+                .form-container {
+                    width: 100%;
+                    height: 100%;
+                    right: 0;
+                    bottom: 0;
+                    border-radius: 0;
+                }
+            }
+            /* Hero Section with Video Background */
+.hero-section {
+    position: relative;
+    color: #fff;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    height: 60vh; /* Set fixed height */
+    width: 100%; /* Full width */
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Add a dark overlay to the video */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Style for the video container */
+.hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Force the Vimeo wrapper to full dimensions */
+.hero-video-container > div {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+}
+
+/* Force the iframe to cover everything */
+.hero-video-container iframe {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 100vw !important; 
+    height: 56.25vw !important; /* Height based on 16:9 ratio */
+    min-height: 100vh !important;
+    min-width: 177.77vh !important; /* Width based on 16:9 ratio */
+    transform: translate(-50%, -50%) !important;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 1rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 70vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+	.navbar {
+        padding: 1rem 1.5rem;
+        z-index: 1000;
+    }
+
+    .navbar-brand img {
+        height: 40px;
+    }
+          /* Footer Styles */
+.site-footer {
+    background-color: #006FBA;
+    padding: 1.5rem 2rem;
+    position: relative;
+    height: 200px; /* Increased height to show full Larry */
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.site-footer span,
+.site-footer a {
+    display: block;
+    line-height: 1.4;
+    margin-bottom: 0.2rem;
+}
+
+.site-footer a {
+    color: white !important;
+    text-decoration: none;
+}
+
+.site-footer .larry-mascot {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    width: 200px;
+    height: auto;
+}
+
+hr {
+    height: 2px;
+    background: #789928 !important;
+    color: #789928 !important;
+    opacity: 1 !important;
+    width: 800px !important;  /* Set fixed width to match Benefits line */
+    margin: 1rem auto !important;
+    display: block !important;
+}
+
+/* GTFS & publishing section */
+.gtfs-section {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+    position: relative;
+}
+
+.gtfs-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.gtfs-icon {
+    font-size: 3rem;
+    color: #006FBA;
+    margin-bottom: 1rem;
+}
+        </style>
+        /* Color definitions */
+.text-green {
+    color: #006FBA !important; /* Corrected from #006FBA to green */
+}
+.btn-green {
+    background-color: #006FBA !important; /* Corrected from #006FBA to green */
+    color: #fff !important;
+}
+.text-blue {
+    color: #006FBA !important; /* Keep blue as is */
+}
+.btn-blue {
+    background-color: #006FBA !important; /* Keep blue as is */
+    color: #fff !important;
+}
+
+/* Horizontal rule and accents */
+hr {
+    height: 2px;
+    background: #789928 !important;
+    color: #789928 !important;
+    opacity: 1 !important;
+    width: 800px !important;
+    margin: 1rem auto !important;
+    display: block !important;
+}
+
+/* Icon colors */
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #006FBA; /* Changed to blue color for feature icons */
+}
+
+/* Checkmarks and bullet points */
+.check-icon, 
+.bullet-icon,
+svg[class*="check"],
+.gtfs-section .check-icon {
+    color: #006FBA !important; /* Changed to blue color for checkmarks/icons */
+}
+
+/* GTFS icon */
+.gtfs-icon {
+    font-size: 3rem;
+    color: #006FBA; /* Keep blue for GTFS icon */
+    margin-bottom: 1rem;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #006FBA; /* Keep blue for footer */
+    padding: 1.5rem 2rem;
+    position: relative;
+    height: 200px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+/* Contact widget */
+#contact-icon {
+    background: #006FBA; /* Keep blue for contact icon */
+    color: white;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
+}
+/* Announcement System Specific Styles */
+.feature-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.info-panel {
+    background-color: #006FBA;
+    color: white;
+    border-radius: 8px;
+    padding: 3rem;
+    margin: 3rem 0;
+}
+
+.feature-list-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.feature-list-icon {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: #006FBA;
+    min-width: 28px;
+}
+
+.feature-list-content {
+    flex: 1;
+}
+
+.feature-list-content h4 {
+    margin-bottom: 0.5rem;
+}
+
+.compliance-section {
+    background-color: #f8f9fa;
+    padding: 4rem 0;
+}
+
+.app-showcase {
+    position: relative;
+    background-color: transparent;
+    border-radius: 12px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    overflow: hidden;
+}
+
+.app-mockup {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.app-mockup img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-icon {
+    flex-shrink: 0;
+    font-size: 24px;
+    color: #006FBA;
+    margin-right: 1rem;
+    width: 30px;
+    text-align: center;
+}
+
+.benefit-content {
+    flex-grow: 1;
+}
+
+/* Hero content responsive improvements */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Improved responsiveness for the HR element */
+@media (max-width: 992px) {
+    hr {
+        width: 90% !important;
+        max-width: 600px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    hr {
+        width: 85% !important;
+        max-width: 400px !important;
+    }
+}
+
+/* Agency Logo Styling (if missing) */
+.agency-logo {
+    width: 200px !important;
+    height: 80px !important;
+    object-fit: contain !important;
+}
+
+.btn-green {
+    background-color: #789928 !important; /* Corrected from #006FBA to green */
+    color: #fff !important;
+}
+
+/* Icon colors and styles */
+.check-icon, 
+.bullet-icon,
+svg[class*="check"],
+.gtfs-section .check-icon {
+    color: #006FBA !important; /* Blue color for checkmarks/icons */
+}
+/* Footer mobile adjustments */
+@media (max-width: 768px) {
+    /* Adjust the footer layout for mobile */
+    .site-footer {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: auto; /* Allow height to expand as needed */
+      padding-bottom: 200px; /* Make room for Larry at the bottom */
+    }
+    
+    /* Position the container with text at the top */
+    .site-footer .container {
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Keep text formatting intact */
+    .site-footer span,
+    .site-footer a {
+      display: block;
+      white-space: normal; /* Allow text to wrap normally */
+      max-width: 100%;
+    }
+    
+    /* Position Larry at the bottom */
+    .site-footer .larry-mascot {
+      position: absolute;
+      bottom: 0;
+      right: 30px;
+      width: 200px; /* Keep original size */
+    }
+  }
+ 
